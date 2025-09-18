@@ -156,7 +156,7 @@ These tools are configured for **testnet only**. For mainnet use:
 1. Change `setup('testnet')` to `setup('mainnet')` in `guardian_signal.py`
 2. Change `SelectParams("testnet")` to `SelectParams("mainnet")` in `generate_guardian_address.py`
 3. Use mainnet UTXOs and addresses
-4. **Exercise extreme caution** - test thoroughly on testnet first
+4. **Exercise extreme caution** - this is experimental software in support of a BIP draft
 
 ## Troubleshooting
 
