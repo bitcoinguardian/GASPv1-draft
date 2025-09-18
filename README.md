@@ -160,8 +160,6 @@ These tools are configured for **testnet only**. For mainnet use:
 
 ## Troubleshooting
 
-**Transaction not confirming**: Increase fee rate or use RBF (though Guardian protocol requires non-RBF)
-
 **Invalid UTXO**: Check that the UTXO hasn't been spent and the amount is correct
 
 **Nonce errors**: Ensure nonce is higher than the previous signal's nonce
