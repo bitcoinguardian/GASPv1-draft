@@ -1,6 +1,8 @@
 # Guardian Signal Tools
 
-Command-line tools for creating and managing Guardian Address signals for the Guardian Address BIP implementation.
+Command line tools for creating and managing Guardian Address signals for the Guardian Address BIP implementation.
+
+A wallet implementation of this draft implementing the protocol exists at https://github.com/bitcoinguardian/electrum
 
 ## Overview
 
@@ -30,7 +32,7 @@ python3 generate_guardian_address.py
 ```
 
 This outputs:
-- WIF private key (keep secure and separate from spending wallets)  
+- WIF private key (keep secure and separate from spending wallets)
 - Testnet P2WPKH address (your Guardian Address)
 
 **Security Note**: The Guardian private key must be stored separately from your spending wallet keys to prevent coercion attacks.
@@ -73,7 +75,7 @@ python3 guardian_signal.py \
   --broadcast
 ```
 
-#### Unlock Wallet  
+#### Unlock Wallet
 ```bash
 python3 guardian_signal.py \
   --wif <guardian_private_key_wif> \
@@ -91,7 +93,7 @@ python3 guardian_signal.py \
 ### Parameters
 
 - `--wif`: WIF private key controlling the Guardian address
-- `--utxo-txid`: Transaction ID of UTXO to spend  
+- `--utxo-txid`: Transaction ID of UTXO to spend
 - `--utxo-vout`: Output index (usually 1 for change output)
 - `--utxo-sats`: Amount in the UTXO (in satoshis)
 - `--utxo-addr`: Guardian address (P2WPKH format)
@@ -111,7 +113,7 @@ guardv1.Lock=<true|false>#<nonce>
 
 Examples:
 - `guardv1.Lock=false#1` - Unlock/instantiation signal
-- `guardv1.Lock=true#2` - Lock signal  
+- `guardv1.Lock=true#2` - Lock signal
 - `guardv1.Lock=false#3` - Unlock signal
 
 ## Pre-signed Transactions
@@ -119,7 +121,7 @@ Examples:
 For emergency use, you can create pre-signed lock transactions:
 
 1. Create the transaction without `--broadcast`
-2. Save the raw transaction hex  
+2. Save the raw transaction hex
 3. Store it securely but separate from keys
 4. Broadcast later using: `bitcoin-cli sendrawtransaction <hex>`
 
@@ -141,7 +143,7 @@ For increased reliability, create multiple transactions with the same nonce but 
 # Low fee version
 python3 guardian_signal.py --fee-sats 1000 --nonce 2 --lock
 
-# High fee version  
+# High fee version
 python3 guardian_signal.py --fee-sats 3000 --nonce 2 --lock
 ```
 
@@ -152,7 +154,7 @@ Only broadcast one - they're mutually exclusive but provide fee flexibility.
 These tools are configured for **testnet only**. For mainnet use:
 
 1. Change `setup('testnet')` to `setup('mainnet')` in `guardian_signal.py`
-2. Change `SelectParams("testnet")` to `SelectParams("mainnet")` in `generate_guardian_address.py`  
+2. Change `SelectParams("testnet")` to `SelectParams("mainnet")` in `generate_guardian_address.py`
 3. Use mainnet UTXOs and addresses
 4. **Exercise extreme caution** - test thoroughly on testnet first
 
