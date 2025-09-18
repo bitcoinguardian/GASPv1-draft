@@ -147,7 +147,7 @@ python3 guardian_signal.py --fee-sats 1000 --nonce 2 --lock
 python3 guardian_signal.py --fee-sats 3000 --nonce 2 --lock
 ```
 
-Only broadcast one - they're mutually exclusive but provide fee flexibility.
+Only broadcast one - they're mutually exclusive but provide fee flexibility. Duplicate signal nonces are gracefully handled in the wallet.
 
 ## Testnet vs Mainnet
 
