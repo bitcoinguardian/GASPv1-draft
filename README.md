@@ -6,7 +6,7 @@ A wallet implementation of this draft implementing the protocol exists at https:
 
 ## Overview
 
-These tools help create the Guardian Address transactions required for the Guardian Address protocol - a Bitcoin coercion resistance mechanism that uses on-chain signaling to lock/unlock wallets remotely.
+These tools help create the Guardian Address transactions required for the Guardian Address protocol - a Bitcoin coercion resistance mechanism that uses on-chain signalling to lock/unlock wallets remotely.
 
 ## Files
 
