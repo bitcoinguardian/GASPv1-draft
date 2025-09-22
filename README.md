@@ -18,7 +18,7 @@ These tools help create the Guardian Address transactions required for the Guard
 Install dependencies:
 
 ```bash
-pip install python-bitcoinutils ecdsa requests bitcoin
+pip install python-bitcoinutils ecdsa requests bitcoin python-bitcoinlib
 ```
 
 ## Usage
