@@ -35,7 +35,7 @@ This outputs:
 - WIF private key (keep secure and separate from spending wallets)
 - Testnet P2WPKH address (your Guardian Address)
 
-**Security Note**: The Guardian private key must be stored separately from your spending wallet keys to prevent coercion attacks.
+**Security Note**: The Guardian private key must be stored separately from your spending wallet keys to prevent forced signalling attacks.
 
 ### 2. Fund Guardian Address
 
